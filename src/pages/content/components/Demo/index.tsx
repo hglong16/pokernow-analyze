@@ -4,8 +4,9 @@ import refreshOnUpdate from "virtual:reload-on-update-in-view";
 
 refreshOnUpdate("pages/content");
 
+const pageDiv = document.querySelector("#page")
 const root = document.createElement("div");
 root.id = "chrome-extension-boilerplate-react-vite-content-view-root";
-document.body.append(root);
+pageDiv.insertBefore(root, pageDiv.firstChild);
 
 createRoot(root).render(<App />);
